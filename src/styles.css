@@ -1,36 +1,172 @@
-body {
-  font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: "Glegoo", serif;
+  font-size: 20px;
 }
 
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
+body {
+  background-color: white;
 }
 
-nav ul {
-  list-style: none;
+.header {
+  background: rgb(254, 249, 249);
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  height: 101px;
+  padding: 5px 10%;
 }
 
-nav ul li a {
-  color: #fff;
+.header .logo{
+  cursor: pointer;
+  
+}
+
+.header .logo img {
+  width: auto;
+  height: 100px;
+  transition: all 0.3s;
+}
+
+.header .logo img:hover {
+  transform: scale(1.1);
+}
+
+.header .nav-links {
+  list-style: none;
+}
+
+.header .nav-links li {
+display: inline-block;
+padding: 0 20px;
+}
+
+.header .nav-links a{
+  font-size: 700;
+  color: rgb(0, 0, 0);
   text-decoration: none;
+} 
+
+.header .nav-links li:hover {
+  transform: scale(1.1);
+}
+.header .nav-links li a:hover {
+  color: orangered;
 }
 
-.hero {
-  padding: 2rem;
-  background-color: #f4f4f4;
-  text-align: center;
+button{
+  width:115px;
+  height:60px;
+  border-radius: 50px;
+  background: linear-gradient(to left top, #ff0000 50%, #43ee00 50%);
+  border-style: none;
+  color:#fff;
+  font-size: 23px;
+  letter-spacing: 3px;
+  font-family: 'Lato';
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  padding: 0px;
+  overflow: hidden;
+  transition: all .5s;
+  box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+}
+button span{
+  position: absolute;
+  display: block;
+}
+button span:nth-child(1){
+  height: 3px;
+  width:200px;
+  top:0px;
+  left:-200px;
+  background: linear-gradient(to right, rgba(0,0,0,0), #f6e58d);
+  border-top-right-radius: 1px;
+  border-bottom-right-radius: 1px;
+  animation: span1 2s linear infinite;
+  animation-delay: 1s;
 }
 
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
+@keyframes span1{
+  0%{
+      left:-200px
+  }
+  100%{
+      left:200px;
+  }
+}
+button span:nth-child(2){
+  height: 70px;
+  width: 3px;
+  top:-70px;
+  right:0px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), #f6e58d);
+  border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 1px;
+  animation: span2 2s linear infinite;
+  animation-delay: 2s;
+}
+@keyframes span2{
+  0%{
+      top:-70px;
+  }
+  100%{
+      top:70px;
+  }
+}
+button span:nth-child(3){
+  height:3px;
+  width:200px;
+  right:-200px;
+  bottom: 0px;
+  background: linear-gradient(to left, rgba(220, 11, 11, 0), #f6e58d);
+  border-top-left-radius: 1px;
+  border-bottom-left-radius: 1px;
+  animation: span3 2s linear infinite;
+  animation-delay: 3s;
+}
+@keyframes span3{
+  0%{
+      right:-200px;
+  }
+  100%{
+      right: 200px;
+  }
+}
+
+button span:nth-child(4){
+  height:70px;
+  width:3px;
+  bottom:-70px;
+  left:0px;
+  background: linear-gradient(to top, rgba(0,0,0,0), #f6e58d);
+  border-top-right-radius: 1px;
+  border-top-left-radius: 1px;
+  animation: span4 2s linear infinite;
+  animation-delay: 4s;
+}
+@keyframes span4{
+  0%{
+      bottom: -70px;
+  }
+  100%{
+      bottom:70px;
+  }
+}
+
+button:hover{
+  transition: all .5s;
+  transform: rotate(-3deg) scale(1.1);
+  box-shadow: 0px 3px 5px rgba(165, 47, 47, 0.4);
+color: rgb(48, 48, 39);
+}
+button:hover span{
+  background-color: orangered;
+  animation-play-state: paused;
 }
