@@ -1,0 +1,21 @@
+node_modules/# Ignorar la carpeta de salida de Parcel
+dist/
+ 
+# Ignorar archivos de configuración de Parcel
+.cache/
+ 
+# Ignorar dependencias de Node.js
+node_modules/
+ 
+# Ignorar archivos de log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+ 
+# Ignorar archivos del sistema operativo
+.DS_Store
+Thumbs.db
+ 
+# Ignorar archivos de entorno
+.env
+tiene menú contextual
