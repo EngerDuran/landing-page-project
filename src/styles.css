@@ -10,6 +10,7 @@
 
 body {
   background-color: white;
+  
 }
 
 .header {
@@ -170,3 +171,54 @@ button:hover span{
   background-color: orangered;
   animation-play-state: paused;
 }
+
+.bienvenida {
+  height: 600px;
+  background-image: url(img/fondo\ prueba.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.messages {
+display: grid;
+}
+
+.mensaje1{
+ margin: auto;
+  color: rgb(102, 178, 46);
+  font-family: Poppins, sans-serif;
+  margin-top: 15px;
+}
+
+
+.parrafo {
+  font-size: 30px;
+  margin-top: 30px;
+  color: rgb(5, 13, 0);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.imagenes {
+  display: flex;
+  width: 1450px;
+  height: 430px;
+}
+
+.imagenes img {
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .8;
+  transition: .5s ease;
+  margin: 5px;
+  margin-top: 20px;
+}
+
+.imagenes img:hover {
+  cursor: crosshair;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+ 
